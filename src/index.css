@@ -1,4 +1,5 @@
 /* || imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 /* || resetter */
@@ -9,23 +10,210 @@
   padding: 0;
   border: none;
   outline: none;
+  text-decoration: none;
   list-style-type: none;
   box-sizing: border-box;
+}
+
+/* || root */
+:root
+{
+  /* || colors */
+  --text-color: #ecedf3;
+  --hover-color: #93939F;
 }
 
 
 /* || general styling */
 
-body
+.App
 {
   height: 100dvh;
-  background-image: url(/src/media/img/background-img.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+  background-color: #B9B8C5;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+}
+
+.box
+{
+  height: 100dvh;
+}
+
+.poster-box
+{
+  position: relative;
+  background-image: url(/src/media/img/poster-8571685_1920.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 68%;
+}
+
+.background-transparency
+{
+  position: absolute;
+  background-color: rgba(65, 68, 87, .3);
+  width: 100%;
+  height: 100vh;
+}
+
+.card-box
+{
+  position: relative;
+  width: 32%;
+  background-image: url(/src/media/img/plant-7842919_1920.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-transparency-2
+{
+  position: absolute;
+  top: 0; left: 0;
+  background-color: rgba(65, 68, 87, .97);
+  width: 100%;
+  height: 100vh;
+}
+
+.wl-msg
+{
+  padding: 50px 28px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.wl-msg h1
+{
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+
+.wl-msg p
+{
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+#sign-in
+{
+  display: none;
+}
+
+
+/* || form */
+
+form
+{
+  inset: 4px;
+  display: flex;
+  padding-inline: 60px;
+  flex-direction: column;
+
+}
+
+form h2
+{
+  color: var(--text-color);
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: .04em;
+}
+
+form .inputBox
+{
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+form .inputBox input
+{
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  color: black;
+  font-size: 1rem;
+  letter-spacing: .05em;
+  transition: .5s;
+  z-index: 10;
+}
+
+form .inputBox label
+{
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  color: var(--text-color);
+  font-size: 1em;
+  letter-spacing: .05em;
+  transition: .5s;
+}
+
+
+form .inputBox input:valid ~ label,
+form .inputBox input:focus ~ label
+{
+  color: var(--text-color);
+  font-size: .75em;
+  transform: translateY(-34px);
+}
+
+
+form .inputBox i
+{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-color);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: .5s;
+  pointer-events: none;
+}
+
+form .inputBox input:valid ~ i,
+form .inputBox input:focus ~ i
+{
+  height: 44px;
+}
+
+form .links
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+form .links a
+{
+  margin: 20px 0;
+  font-size: .75em;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: .3s;
+}
+
+form .links a:hover
+{
+  color: var(--hover-color);
+}
+
+form input[type="submit"]
+{
+  padding: 9px 25px;
+  background-color: var(--text-color);
+  cursor: pointer;
+  font-size: .9em;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 20px;
 }
