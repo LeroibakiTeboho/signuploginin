@@ -25,6 +25,24 @@ const SignIn = () => {
             <a href="#">Sign Up</a>
         </div>
         <input type="submit" value='Login' />
+
+        <div className='separator'>
+            <i className='line'></i>
+            <p>or</p>
+            <i className='line'></i>
+        </div>
+
+        <div className='sign-up-platforms'>
+            <div className='media-bg google'>
+                <i class="fa-brands fa-google"></i>
+                <p>Sign up with Google</p>
+            </div>           
+            <div className='media-bg facebook'>
+                <i class="fa-brands fa-facebook-f"></i>
+                <p>Sign Up with Facebook</p>
+            </div>
+           
+        </div>
     </form>
   )
 }
