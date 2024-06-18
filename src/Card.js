@@ -9,6 +9,7 @@ const Card = () => {
          <div className='background-transparency-2'>
             <div className='wl-msg' id='sign-up'>
                 <h1>Get Started!</h1>
+                
                 <p>Sign up to join our innovative community. Experience convenience and excitement today!</p>
             </div>
             <div className='wl-msg' id='sign-in'>
